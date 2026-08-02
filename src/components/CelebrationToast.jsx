@@ -13,7 +13,7 @@ function CelebrationToast() {
 
   return (
     <div className="celebration-toast">
-      <img src="/run.gif" alt="" />
+      <img src={`${import.meta.env.BASE_URL}run.gif`} alt="" />
     </div>
   )
 }
