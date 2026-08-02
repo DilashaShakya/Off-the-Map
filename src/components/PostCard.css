@@ -1,0 +1,113 @@
+.post-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  background: var(--color-card);
+  border: 2px solid var(--color-text);
+  padding: var(--space-lg);
+  color: var(--color-text);
+  transform: rotate(var(--tilt, -0.6deg));
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+  box-shadow: 3px 4px 0 rgba(17, 17, 17, 0.12);
+
+  /* Slightly irregular corners — hand-drawn rather than a perfect rectangle */
+  border-radius: 255px 15px 225px 15px / 15px 225px 15px 255px;
+}
+
+.post-card:nth-child(3n) {
+  --tilt: 0.8deg;
+  border-radius: 225px 15px 255px 15px / 15px 255px 15px 225px;
+}
+
+.post-card:nth-child(3n + 1) {
+  --tilt: -0.8deg;
+  border-radius: 15px 225px 15px 255px / 255px 15px 225px 15px;
+}
+
+.post-card:nth-child(3n + 2) {
+  --tilt: 0.4deg;
+}
+
+.post-card:hover {
+  transform: rotate(0deg) translateY(-4px);
+  box-shadow: 5px 6px 0 rgba(17, 17, 17, 0.16);
+}
+
+.post-card-tape {
+  position: absolute;
+  top: -12px;
+  left: 24px;
+  width: 52px;
+  height: 22px;
+  background: var(--tape-color);
+  opacity: 0.55;
+  transform: rotate(-4deg);
+  box-shadow: 1px 1px 2px rgba(17, 17, 17, 0.15);
+}
+
+.post-card-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px dashed currentColor;
+  margin-bottom: var(--space-xs);
+}
+
+.post-card-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  align-self: flex-start;
+  background: var(--color-secondary);
+  color: var(--color-text);
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: var(--radius-pill);
+}
+
+.post-card-title {
+  margin: 0;
+  font-size: 20px;
+  line-height: 1.3;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.post-card-meta {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-hand);
+  font-size: 19px;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  margin-top: auto;
+}
+
+.post-card-upvotes {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--color-primary);
+}
+
+.post-card-dot {
+  opacity: 0.6;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .post-card {
+    transform: none;
+  }
+
+  .post-card:hover {
+    transform: translateY(-2px);
+  }
+}

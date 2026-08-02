@@ -1,0 +1,21 @@
+.split-icon {
+  position: relative;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+.split-icon-half {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.split-icon-green {
+  color: var(--color-green);
+  clip-path: inset(0 50% 0 0);
+}
+
+.split-icon-pink {
+  color: var(--color-primary);
+  clip-path: inset(0 0 0 50%);
+}
