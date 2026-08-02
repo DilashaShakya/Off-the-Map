@@ -84,6 +84,7 @@ GIF created with ...
 Describe any challenges encountered while building the app.
 
 ## License
+references: https://giphy.com/gifs/dog-fast-dancingdog-xjulTA8SOaEjjhSA81
 
     Copyright [yyyy] [name of copyright owner]
 
