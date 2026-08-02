@@ -2,7 +2,8 @@
 
 Submitted by: Dilasha Shakya
 
-This web app: **insert description**
+This web app: **Off the Map** is a community for discovering and sharing hidden gems around the world. From cozy cafés and scenic hikes to local restaurants and breathtaking viewpoints, users can share places worth exploring, tell their stories, and help others find their next adventure.
+
 
 Time spent: 12 hours spent in total
 
